@@ -1,0 +1,308 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.4;
+  color: #444;
+  background: #fff;
+  height: 100vh;
+}
+
+.navBar {
+  position: relative;
+}
+
+.navBar button {
+  position: fixed;
+  left: 40px;
+  top: 40px;
+  z-index: 10;
+  cursor: pointer;
+  background: transparent;;
+  border: none;
+}
+
+.menuNav {
+  overflow-y: scroll;
+  list-style: none;
+  position: fixed;
+  top: 0;
+  background: darkcyan;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 0;
+  overflow: hidden;
+  max-width: 290px;
+  z-index: 9;
+}
+
+.menuNav.showMenu {
+  width: 100%;
+}
+
+
+.menuNav .form-container {
+  margin-top: 7rem;
+}
+
+
+/* form */
+.sidebar-content {
+  height:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+}
+
+.form-container {
+  width: 100%;
+  padding: 8rem 10px 4rem;
+  flex:1;
+  max-width:600px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.title {
+  padding:15px 0;
+  font-size: 28px;
+  text-align:center;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  margin: 10px 5px;
+}
+
+.input-name-park, .form-group > select {
+  font-size: 1rem;
+  font-weight: 400;
+  width: 85%;
+  padding-right: 5px;
+  padding-left: 10px;
+  border-radius: calc(0.5 * 100px);
+}
+
+.input-name-park::placeholder {
+  color: #000;
+} 
+
+.input-name-park {
+  height: 45px;
+  outline: none;
+  border: none;
+}
+
+.check-visit{
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.display-block {
+  position: relative;
+  display: inline-block;
+  width: 85%;
+  height: 28px;
+}
+
+.toggle-switch {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 75%;
+  right: 0;;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: calc(0.5 * 100px);
+}
+
+.toggle-switch:before {
+  cursor: pointer;
+  position: absolute;
+  content: "";
+  height: 23px;
+  width: 23px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: calc(0.5 * 100px);
+}
+input:checked + .toggle-switch {
+  background-color: green;
+}
+input:checked + .toggle-switch:before {
+  transform: translateX(26px);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.map-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.map-wrapper__controls {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  top: 0;
+  left: 20%;
+  margin: 1.25rem 0;
+  transform: translateX(-50%);
+}
+
+.modal-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container__inner {
+  width: 30%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  background-color: #ccc;
+  box-shadow: rgba(0, 0, 0, .35) 0px 10px 15px;
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.modal-container__btn-close-modal {
+  display: flex;
+  margin-left: auto;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+}
+
+.modal-container__form {
+  overflow:auto;
+}
+
+.modal-container__form-group {
+  margin: 10px 5px;
+  flex-direction: row;
+}
+.modal-container__form-group > label > textarea{
+  border-style: none;
+  border-color: Transparent;
+  overflow: auto;
+  outline: none;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 400;
+  padding-right: 5px;
+  padding-left: 10px;
+  flex: 0 0 95%;
+  height: 120px;
+  border: 1px solid rgb(190, 190, 190);
+  background-color: #ccc;
+  resize:none;
+}
+
+.modal-container__form-group > label > textarea:focus {
+  background-color: white;
+}
+
+
+.input-food-text::placeholder {
+  color: #000;
+} 
+.input-atmosphere-text::placeholder {
+  color: #000;
+}
+
+.input-comment-text::placeholder {
+  color: #000;
+}
+
+.food-text, .atmosphere-text, .comment-text, .theming-text, .family-text, .entertainment-text, .rides-text {
+  border-style: none;
+  border-color: Transparent;
+  overflow: auto;
+  outline: none;
+  display:flex;
+  font-size: 1rem;
+  font-weight: 400;
+  padding-right: 5px;
+  padding-left: 10px;
+  flex: 0 0 95%;
+  height: 120px;
+  border: 1px solid rgb(190, 190, 190);
+}
+
+.modal-container__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:15px 0;
+  font-size: 20px;
+}
+
+.modal-container__mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-container__label-food, .modal-container__label-atmosphere, .modal-container__label-comment, .modal-container__label-price, .modal-container__label-entertainment, .modal-container__label-theming, .modal-container__label-rides, .modal-container__label-family {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modal-container__input {
+  display: flex;
+  justify-content:center;
+}
+.modal-container__input-confirm {
+  display: flex;
+  padding:15px 0;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+
+}
+
+.star > button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.star {
+  display: inline-block;
+  
+}
+
+.rating-stars {
+  margin-left: 10px;
+}
+
+.marker-park text {
+  visibility: hidden;
+}
+
+.marker-park:hover text{
+      visibility: visible;
+}
