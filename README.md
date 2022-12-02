@@ -1,6 +1,5 @@
 ### Link 
-[https://superb-twilight-9975bc.netlify.app](https://superb-twilight-9975bc.netlify.app/)
-
+https://parks-ratings.netlify.app 
 ### Objectives 
 - Learn to use ReactJs
 - personal app
