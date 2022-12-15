@@ -9,7 +9,7 @@ https://parks-ratings.netlify.app
 - The map shows parks around the world.
 - By clicking on one of the parks, it opens a new window where you can review and rate several criterias.
 - On the left, there is a hamburger menu. In it, you can find a form that allow you to filter parks.
-### Techs, softwares, libraires…
+### Techs, softwares, librairies…
 - Opera GX 
 - Vscode 
 - ReactJs
