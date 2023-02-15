@@ -60,5 +60,5 @@ if __name__ == "__main__":
                         'latitude': latitude
 
     })
-    df.to_csv('../public/link_parks.csv', index=False, encoding='utf-8')
+    df.to_csv('../src/link_parks.csv', index=False, encoding='utf-8')
     print("DONE")
